@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Mondo</title>
+    <link rel="icon" type="image/png" href="media/favicon.png" />
+    <!-- Metadatos genéricos -->
+    <meta name="description" content="descripción de la página">
+    <meta name="image" content="media/imagen.png">
+    <!-- Metadatos Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="título de la página">
+    <meta name="twitter:url" content="título de la página"> <!--ACÁ EL VER MÁS-->
+    <meta name="twitter:description" content="descripción de la página">
+    <meta name="twitter:image:src" content="media/imagen.png">
+    <!-- Metadatos Open Graph (Facebook, Pinterest & LinkedIn) -->
+    <meta name="og:title" content="título de la página">
+    <meta name="og:description" content="descripción de la página">
+    <meta name="og:image" content="media/imagen.png">
+    <meta name="og:type" content="website">
+    <!-- Ahora vinculamos el estilo -->
+    <link rel="stylesheet" href="estilo.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <h1>- MONDO -</h1>
+        <h2>El mundo no es sostenible hoy; diseñar </br> para colaborar es nuestro ideal</h2>
+    </header>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+        <source src="media/video.webm" type="video/webm">
+        <source src="media/video.mp4" type="video/mp4">
+    </video>
+    <main>
+        <section id="portafolio">
+            <h3>Nuestros trabajos</h3>
+            <!--acá se colocan y organizan las cosas con programación-->
+        </section>
+        <section id="equipo">
+            <h3>Quiénes somos</h3>
+            <div class="integrante">
+                <h4>JASON ARÁNGUIZ</h4>
+                <address><a href="mailto:mail@uc.cl">jlaranguiz@uc.cl</a></address>
+                <address><a href="https://www.instagram.com/jasonaranguiz/">ver en instagram</a></address>
+                <blockquote><cite>La comunicación entre distintas disciplinas es la clave para un mejor futuro; el diseño puede ser un buen canal para ello.</cite></blockquote>
+            </div>
+            <div class="integrante">
+                <h4> KARINA ANACONA</h4>
+                <address><a href="mailto:mail@uc.cl">keanacona@uc.cl</a></address>
+                <address><a href="https://www.instagram.com/xnxconx_/">ver en instagram</a></address>
+                <blockquote><cite>La colaboración es el punta pie inical para lograr el cambio que tanto anhelamos.</cite></blockquote>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <p>Procesos de Producción · sección web · segundo semestre · 2019</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script>
+        window.onload = function() {
+            var container = document.querySelector('#portafolio');
+            var msnry = new Masonry(portafolio, {
+                itemSelector: '.item'
+            });
+        };
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="portafolio.js"></script>
+</body>
+
+</html>

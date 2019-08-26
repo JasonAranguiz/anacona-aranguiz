@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css?family=Lexend+Tera|Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:300|Open+Sans&display=swap');
+
+/*
+
+Así se escriben los comentario en CSS.
+Siempre se abren con slash asterisco, y
+se cierran con asterisco slash.
+
+*/
+
+*{
+    margin:0;
+    padding:0;
+}
+
+
+
+body{
+    font-family:'Open Sans', sans-serif;
+    font-weight:60;
+    background-color:#EEE; /*el primer par es R, segundo es G y tercero es B*/
+}
+
+h1, h2{
+    text-align:center;
+}
+
+h1{
+    color:#FFFFFF;
+    font-family:'Lexend Tera', sans-serif;
+    font-size:3rem;
+    margin-top: 22%;
+    font-weight:80;
+}
+
+h2{
+    color:#FFFFFF;
+    font-family:'Open Sans', sans-serif;
+    letter-spacing: .1rem;
+    font-size:1rem;
+    margin-top: 0;
+    font-weight:10;
+}
+
+@media screen and (max-width: 768px){
+    h1{ font-size:4rem; }
+    h2{ font-size:1rem; }
+}
+
+@media screen and (max-width: 576px){
+    h1{ font-size:2rem; }
+    h2{ font-size:.25rem; }
+}
+
+
+h3{
+    display:none;
+}
+
+h5, h6{
+    font-weight:200;
+
+}
+
+a{
+    color:#23D9B7;
+    text-decoration:none;
+}
+
+a:hover{
+    color:#FFF;
+    text-decoration:underline;
+}
+
+header{
+    width:100%;
+    top:35%;                  /*AQUIIII*/
+    position: absolute;
+    text-align: right;
+    z-index:9;
+  }
+
+@media screen and (orientation: portrait){
+    header{ top:12%; }
+}
+
+video{
+    width:98%;
+    padding:1% 1% .75% 1%;
+    height: inherit;
+}
+
+main{
+    width:100%;
+}
+
+/*
+Puedes revisar detalles sobre el siguiente uso de flex
+en https://www.taniarascia.com/easiest-flex-grid-ever/
+*/
+
+#equipo { /*ESTE ES EL BANNER DE LOS INTEGRANTES*/
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    color:#fff /* lo mismo que #FFFFFF, simplificando pares iguales*/;
+    color:#FFF;
+}
+
+#equipo a{
+    color:rgba(255,255,255,.7);
+}
+
+#equipo a:hover{
+    color:rgba(255,255,255,.9);
+}
+
+@media screen and (orientation: landscape){
+    .integrante { flex:3; }
+}
+
+.integrante h4{
+    padding: 1rem 3rem 0rem 2rem;
+}
+
+.integrante address{
+    padding: 0.25rem 2rem;
+    font-size:12px;
+    font-style:normal;
+}
+
+.integrante blockquote{
+    padding: 2rem 2rem 2rem 2rem;
+    font-size: 14px;
+    color: #fff;
+}
+
+}
+
+.integrante blockquote cite {
+    display:block;
+    font-style: normal;
+    font-weight: 100;
+    font-size:.2rem;
+    letter-spacing : 0.1rem;
+    padding-top:0rem;
+    color:#fff;
+}
+
+.integrante blockquote cite:before {
+    content:"— ";
+}
+
+.integrante:nth-of-type(1){
+    background-color:#202020;
+}
+
+
+.integrante:nth-of-type(2){
+    background:#202020;
+}
+
+.integrante:nth-of-type(1):hover{
+    background-color:#23D9B7;
+    background-image:url('media/integrante-1b.png');
+    background-position: bottom right;
+    background-size:auto 100%;
+    background-repeat: no-repeat;
+}
+
+.integrante:nth-of-type(2):hover{
+    background:#23D9B7;
+    background-image:url('media/integrante-2b.png');
+    background-position: bottom right;
+    background-size:auto 100%;
+    background-repeat: no-repeat;
+}
+
+/*
+
+AHORA VAMOS POR PORTAFOLIO
+
+*/
+
+#portafolio{
+    width:100%;
+    padding:1% 5;
+}
+
+.item {
+    width:23%;
+    margin:1%;
+    color:#646464;      /*Texto description*/
+    background:#202020;
+    box-shadow:0 0 5px rgba(0,0,0,.5);
+}
+
+@media screen and (max-width: 768px){
+    .item{
+        width:48%;
+        margin:1%;
+        background:#333;
+        color:#eee;
+    }
+}
+ @media screen and (max-width: 576px){
+     .item{
+         width:96%;
+         margin:2%;
+         background:#000;
+         color:#FFF;
+    }
+}
+
+ .item figure{
+     overflow:hidden;
+}
+ .item figure img{
+     width:100%;
+     margin-bottom:-4px;
+     filter: blur(8px);
+}
+ .item:hover figure img{
+     filter: opacity(100%);
+}
+ .item h4{
+     font-size:.9em;
+     letter-spacing:0.025em;
+     margin:5% 5% 3% 5%;
+     color:#fff;
+}
+ .item p{
+     font-size:0.7em;
+     letter-spacing:0.05em;
+     margin:2% 5% 6% 5%;
+     color: #B0B0B0;
+}
+ footer{
+     width:100%;
+     padding:2.5em 0 2em 0;
+     text-align:center;
+}
